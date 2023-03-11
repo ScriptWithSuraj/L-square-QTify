@@ -1,0 +1,17 @@
+.heroSection {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heroTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+.heroText1 {
+  padding: 97 599 125 368;
+}
+.heroText2 {
+}
