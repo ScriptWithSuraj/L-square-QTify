@@ -1,17 +1,24 @@
 .heroSection {
   background-color: var(--color-black);
   color: var(--color-white);
+  font-size: var(--hero-font-size);
   height: 270px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .heroTextContainer {
   display: flex;
   flex-direction: column;
 }
+.heroImg {
+  height: 212px;
+  width: 212px;
+}
 .heroText1 {
-  padding: 97 599 125 368;
+  font-weight: 600;
 }
 .heroText2 {
+  font-weight: 600;
 }

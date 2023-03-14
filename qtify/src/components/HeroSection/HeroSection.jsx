@@ -9,10 +9,9 @@ function HeroSection({ text1, text2 }) {
       </div>
       <div>
         <img
+          className={styles.heroImg}
           src={require("../../assets/hero-image.png")}
           alt="heroimage"
-          height={212}
-          width={212}
         />
       </div>
     </div>
