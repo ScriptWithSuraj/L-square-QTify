@@ -4,7 +4,7 @@ function Card({ image, follows, title }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.card}>
-        <img src={image} alt="album" loading="lazy" height={163} />
+        <img src={image} alt="album" loading="lazy" width={160} />
         <div className={styles.cardLabel}>
           <div className={styles.cardPill}>
             <p>{follows} Follows</p>
