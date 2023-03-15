@@ -22,7 +22,7 @@ function Section({ title, dataSource }) {
           <h4>{title}</h4>
         </div>
         <div className={styles.showAll} onClick={carouselToggle}>
-          {!showAll ? <h4>Show All</h4> : <h4>Collapse</h4>}
+          {<h4>{!showAll ? "Collapse" : "ShowAll"}</h4>}
         </div>
       </div>
       <div className={styles.sectionCard}>
