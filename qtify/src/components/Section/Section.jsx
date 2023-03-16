@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Section.module.css";
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel";
 
 function Section({ title, dataSource }) {
   const [cardData, setCardData] = useState([]);
@@ -36,7 +37,9 @@ function Section({ title, dataSource }) {
             />
           ))
         ) : (
-          <div>carousel</div>
+          <div>
+            <Carousel cardData={cardData} />
+          </div>
         )}
       </div>
     </div>
