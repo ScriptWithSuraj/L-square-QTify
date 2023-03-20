@@ -26,22 +26,27 @@ function Section({ title, dataSource }) {
           {<h4>{!showAll ? "ShowAll" : "Collapase"}</h4>}
         </div>
       </div>
-      <div className={styles.sectionCard}>
-        {showAll ? (
-          cardData.map((e) => (
+      {showAll ? (
+        <div className={styles.sectionCard}>
+          {cardData.map((e) => (
             <Card
-              image={e.image}
-              follows={e.follows}
-              title={e.title}
-              key={e.id}
+              data={{
+                image: e.image,
+                follows: e.follows,
+                title: e.title,
+                key: e.id,
+              }}
             />
-          ))
-        ) : (
-          <div>
-            <Carousel cardData={cardData} />
-          </div>
-        )}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.sectionCarousel}>
+          <Carousel
+            cardData={cardData}
+            renderCaraousel={(data) => <Card data={data} />}
+          />
+        </div>
+      )}
     </div>
   );
 }

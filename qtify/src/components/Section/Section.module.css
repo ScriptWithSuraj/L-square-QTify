@@ -1,5 +1,5 @@
 .section {
-  margin: 32px;
+  margin: 0px 32px;
 }
 
 .wrapper {
@@ -15,4 +15,7 @@
 .showAll {
   color: var(--color-primary);
   cursor: pointer;
+}
+.sectionCarousel {
+  margin-top: 18px;
 }
