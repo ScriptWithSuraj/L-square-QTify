@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Card from "../Card/Card";
 function Carousel({ cardData }) {
+  console.log("card data from carousel", cardData);
   return (
     <Swiper
       spaceBetween={50}
@@ -11,7 +12,7 @@ function Carousel({ cardData }) {
       onSwiper={(swiper) => console.log(swiper)}
     >
       {cardData.map((e) => (
-        <SwiperSlide>
+        <SwiperSlide id={e.id}>
           <Card
             image={e.image}
             follows={e.follows}
