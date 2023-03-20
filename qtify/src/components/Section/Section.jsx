@@ -6,7 +6,10 @@ import Carousel from "../Carousel/Carousel";
 
 function Section({ title, dataSource }) {
   const [cardData, setCardData] = useState([]);
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState(false);
+  // if (title === "Songs") {
+  //   setShowAll(false);
+  // }
   useEffect(() => {
     dataSource().then((data) => {
       setCardData(data);
@@ -19,22 +22,26 @@ function Section({ title, dataSource }) {
   return (
     <div className={styles.section}>
       <div className={styles.wrapper}>
-        <div>
+        <div style={{ marginTop: "0px" }}>
           <h4>{title}</h4>
+          {title === "Songs" && <div>Switcher</div>}
         </div>
-        <div className={styles.showAll} onClick={carouselToggle}>
-          {<h4>{!showAll ? "ShowAll" : "Collapase"}</h4>}
-        </div>
+
+        {title !== "Songs" && (
+          <div className={styles.showAll} onClick={carouselToggle}>
+            {<h4>{!showAll ? "ShowAll" : "Collapase"}</h4>}
+          </div>
+        )}
       </div>
-      {showAll ? (
+      {showAll && title !== "Songs" ? (
         <div className={styles.sectionCard}>
           {cardData.map((e) => (
             <Card
+              key={e.id}
               data={{
                 image: e.image,
                 follows: e.follows,
                 title: e.title,
-                key: e.id,
               }}
             />
           ))}

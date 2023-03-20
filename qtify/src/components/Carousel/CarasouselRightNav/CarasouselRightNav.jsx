@@ -1,22 +1,22 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
-import { ReactComponent as LeftNavigation } from "../../../assets/left-navigation.svg";
-function CarouselLeftNav() {
+import { ReactComponent as RightNavigation } from "../../../assets/right-navigation.svg";
+function CarasouselRightNav() {
   const swiper = useSwiper();
   return (
     <div
-      onClick={() => swiper.slidePrev()}
+      onClick={() => swiper.slideNext()}
       style={{
         position: "absolute",
         top: "40%",
-        left: 0,
+        right: 0,
         zIndex: 10,
         transform: "translateY(-50%)",
       }}
     >
-      <LeftNavigation />
+      <RightNavigation />
     </div>
   );
 }
 
-export default CarouselLeftNav;
+export default CarasouselRightNav;
